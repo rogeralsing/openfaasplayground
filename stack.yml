@@ -3,11 +3,6 @@ provider:
   name: openfaas
   gateway: https://gw-faas.ornell.io
 functions:
-  fun1:
-    lang: csharp
-    handler: ./fun1
-    image: rogeralsing/fun1:latest
-
   fun3:
     lang: aspnet
     handler: ./fun3
