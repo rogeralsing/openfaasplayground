@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OpenFaaS
-build_property.ProjectDir = /Users/rogerjohansson/git/func/fun3/
+build_property.ProjectDir = /Users/rogerjohansson/git/openfaasplayground/fun3/

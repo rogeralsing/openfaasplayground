@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rogerjohansson/git/func/fun3/function.csproj": {}
+    "/Users/rogerjohansson/git/openfaasplayground/fun3/function.csproj": {}
   },
   "projects": {
-    "/Users/rogerjohansson/git/func/fun3/function.csproj": {
+    "/Users/rogerjohansson/git/openfaasplayground/fun3/function.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rogerjohansson/git/func/fun3/function.csproj",
+        "projectUniqueName": "/Users/rogerjohansson/git/openfaasplayground/fun3/function.csproj",
         "projectName": "function",
-        "projectPath": "/Users/rogerjohansson/git/func/fun3/function.csproj",
+        "projectPath": "/Users/rogerjohansson/git/openfaasplayground/fun3/function.csproj",
         "packagesPath": "/Users/rogerjohansson/.nuget/packages/",
-        "outputPath": "/Users/rogerjohansson/git/func/fun3/obj/",
+        "outputPath": "/Users/rogerjohansson/git/openfaasplayground/fun3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rogerjohansson/.nuget/NuGet/NuGet.Config"

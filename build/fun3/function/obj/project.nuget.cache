@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v5EDgFA7D2n6Ot+W0EIQpSrT7twjBNCyZCZhSeJ5LorKJsTkMVnpPu2UW00D33poEMbbWm1o/HcNqBG/1Q3+3g==",
+  "dgSpecHash": "CBta8S8hOlevyM2eEn2IjE3KQhY3eTAFr2txrqSdm0ky53TzHpln478y7bzb5bQ1pkldGg0kqCsYDBmkCTYnWw==",
   "success": true,
-  "projectFilePath": "/Users/rogerjohansson/git/func/fun3/function.csproj",
+  "projectFilePath": "/Users/rogerjohansson/git/openfaasplayground/fun3/function.csproj",
   "expectedPackageFiles": [
     "/Users/rogerjohansson/.nuget/packages/commandlineparser/2.8.0/commandlineparser.2.8.0.nupkg.sha512",
     "/Users/rogerjohansson/.nuget/packages/microsoft.extensions.configuration/6.0.0/microsoft.extensions.configuration.6.0.0.nupkg.sha512",

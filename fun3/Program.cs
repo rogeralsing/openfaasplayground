@@ -12,6 +12,7 @@ void Configure(WebApplication app)
 {
     // configure the HTTP request pipeline
     app.MapPost("/", () => new { Message = "Hello" });
+    app.MapGet("/test", () => "Yo!!");
 }
 
 Runner.Run( args, Setup, Configure );
