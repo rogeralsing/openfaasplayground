@@ -17,7 +17,6 @@ COPY . .
 # build and publish
 RUN dotnet publish \
     -c release \
-    -r linux-x64 \
     -o published \
     function/function.csproj
 

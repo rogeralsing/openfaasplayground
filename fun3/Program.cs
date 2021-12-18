@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 using OpenFaaS.Hosting;
 
 void Setup(WebApplicationBuilder builder)
@@ -10,9 +9,8 @@ void Setup(WebApplicationBuilder builder)
 void Configure(WebApplication app)
 {
     // configure the HTTP request pipeline
-    app.MapPost("/", () => new { Message = "Hello2" });
-    app.MapGet("/", () => "Yo!!");
-    app.MapGet("/bar", () => "Bar!");
+    app.MapPost("/", (string body) => new { Message = "Hello4" + body });
+    app.MapPost("/test", (string body) => new { Message = "test4" + body });
 }
 
 Runner.Run(args, Setup, Configure);
