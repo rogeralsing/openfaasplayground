@@ -11,7 +11,7 @@ void Setup(WebApplicationBuilder builder)
 void Configure(WebApplication app)
 {
     // configure the HTTP request pipeline
-    app.MapPost("/", () => { return new { Message = "Hello" }; });
+    app.MapPost("/", () => new { Message = "Hello" });
 }
 
 Runner.Run( args, Setup, Configure );
