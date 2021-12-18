@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.3
-FROM ghcr.io/openfaas/of-watchdog:0.9.2 as watchdog
+FROM --platform=${TARGETPLATFORM:-linux/amd64} ghcr.io/openfaas/of-watchdog:0.9.2 as watchdog
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim as builder
+FROM --platform=${TARGETPLATFORM:-linux/amd64} mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim as builder
 
 # suppress data collection
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
@@ -22,7 +22,7 @@ RUN dotnet publish \
     function/function.csproj
 
 # runner
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-bullseye-slim
+FROM --platform=${TARGETPLATFORM:-linux/amd64} mcr.microsoft.com/dotnet/aspnet:6.0-bullseye-slim
 
 COPY --from=watchdog /fwatchdog /usr/bin/
 
