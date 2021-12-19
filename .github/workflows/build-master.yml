@@ -47,8 +47,8 @@ jobs:
       - name: Build and Push the OpenFaaS function
         uses: docker/build-push-action@v2
         with:
-          context: ./build/hello/
-          file: ./build/hello/Dockerfile
+          context: ./build/fun3/
+          file: ./build/fun3/Dockerfile
           push: true
           tags: rogeralsing/fun3:latest-${{ steps.define_env.outputs.github-sha-short }}
 
