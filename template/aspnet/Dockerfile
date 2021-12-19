@@ -17,6 +17,7 @@ COPY . .
 # build and publish
 RUN dotnet publish \
     -c release \
+    --no-self-contained \
     -o published \
     function/function.csproj
 

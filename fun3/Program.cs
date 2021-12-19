@@ -8,9 +8,9 @@ void Setup(WebApplicationBuilder builder)
 
 void Configure(WebApplication app)
 {
-    // configure the HTTP request pipeline
-    app.MapPost("/", (string body) => new { Message = "Hello4" + body });
+    app.MapPost("/", (string body) => new { Message     = "Hello4" + body });
     app.MapPost("/test", (string body) => new { Message = "test4" + body });
+    app.MapGet("/get", () => "tada!");
 }
 
 Runner.Run(args, Setup, Configure);

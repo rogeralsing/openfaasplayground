@@ -7,3 +7,5 @@ functions:
     lang: aspnet
     handler: ./fun3
     image: rogeralsing/fun3:latest
+    labels:
+      com.openfaas.scale.min: 3
