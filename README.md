@@ -1,6 +1,6 @@
-# openfaasplayground
+# Open Faas playground
 
-..
+This is just my personal playground for learning Open FaaS using C#.
 
-Using template:
-https://github.com/goncalo-oliveira/faas-aspnet-template
+The code is using the following template: https://github.com/goncalo-oliveira/faas-aspnet-template
+
