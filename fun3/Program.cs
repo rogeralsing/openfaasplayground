@@ -10,7 +10,7 @@ void Configure(WebApplication app)
 {
     app.MapPost("/", (string body) => new { Message     = "Hello" + body });
     app.MapPost("/test", (string body) => new { Message = "test4" + body });
-    app.MapGet("/get", () => "tada!");
+    app.MapGet("/get", () => "GETGET!");
 }
 
 Runner.Run(args, Setup, Configure);
