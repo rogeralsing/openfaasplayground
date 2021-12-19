@@ -18,21 +18,15 @@ jobs:
         id: define_env
         run: echo "::set-output name=github-sha-short::$(echo $GITHUB_SHA | cut -c 1-7)"
 
-      - name: Pull template
-        uses: docker://openfaas/faas-cli:latest-root
-        with:
-          args: template store pull golang-http
+      # - name: Pull template
+      #   uses: docker://openfaas/faas-cli:latest-root
+      #   with:
+      #     args: template store pull golang-http
 
       - name: Run shrinkwrap build
         uses: docker://openfaas/faas-cli:latest-root
         with:
           args: build --shrinkwrap
-
-      - name: Login to OpenFaaS Gateway
-        uses: docker://openfaas/faas-cli:latest-root
-        with:
-          args: login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
-            -g ${{ secrets.OPENFAAS_GATEWAY }}
 
       - name: Login to DockerHub
         if: success()
@@ -40,6 +34,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Login to OpenFaaS Gateway
+        uses: docker://openfaas/faas-cli:latest-root
+        with:
+          args: login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
+            -g ${{ secrets.OPENFAAS_GATEWAY }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
