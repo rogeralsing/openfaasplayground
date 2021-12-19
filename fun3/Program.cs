@@ -8,7 +8,7 @@ void Setup(WebApplicationBuilder builder)
 
 void Configure(WebApplication app)
 {
-    app.MapPost("/", (string body) => new { Message     = "Hello4" + body });
+    app.MapPost("/", (string body) => new { Message     = "Hello" + body });
     app.MapPost("/test", (string body) => new { Message = "test4" + body });
     app.MapGet("/get", () => "tada!");
 }
